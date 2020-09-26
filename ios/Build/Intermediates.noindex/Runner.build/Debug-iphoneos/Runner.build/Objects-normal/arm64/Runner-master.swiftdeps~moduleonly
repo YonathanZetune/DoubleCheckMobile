@@ -1,0 +1,5 @@
+version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+options: "ebc50eb9ad3618657c9d11cbcc88464f"
+build_time: [1601133338, 806125000]
+inputs:
+  "/Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Runner/AppDelegate.swift": [1571084233, 785902918]

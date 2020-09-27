@@ -1,0 +1,57 @@
+dependencies: \
+  /Users/YoniZetune/Develop/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.14.0+2/ios/Classes/FLTFirebaseFirestoreWriter.m \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/cloud_firestore.build/module.modulemap \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/Target\ Support\ Files/cloud_firestore/cloud_firestore-prefix.pch \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap \
+  /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/usr/include/mach-o/dyld.modulemap \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/Headers/Public/Firebase/Firebase.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/FirebaseCore.build/module.modulemap \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FIROptions.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FIRLoggerLevel.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FIRConfiguration.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseCore/FirebaseCore/Sources/Public/FIRApp.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/Target\ Support\ Files/FirebaseCore/FirebaseCore-umbrella.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseFirestore/FirebaseFirestore/FirebaseFirestore.xcframework/ios-armv7_arm64/FirebaseFirestore.framework/Headers/FirebaseFirestore.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseFirestore/FirebaseFirestore/FirebaseFirestore.xcframework/ios-armv7_arm64/FirebaseFirestore.framework/Modules/module.modulemap \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseFirestore/FirebaseFirestore/FirebaseFirestore.xcframework/ios-armv7_arm64/FirebaseFirestore.framework/Headers/FIRWriteBatch.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseFirestore/FirebaseFirestore/FirebaseFirestore.xcframework/ios-armv7_arm64/FirebaseFirestore.framework/Headers/FIRTransaction.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseFirestore/FirebaseFirestore/FirebaseFirestore.xcframework/ios-armv7_arm64/FirebaseFirestore.framework/Headers/FIRTimestamp.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseFirestore/FirebaseFirestore/FirebaseFirestore.xcframework/ios-armv7_arm64/FirebaseFirestore.framework/Headers/FIRSnapshotMetadata.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseFirestore/FirebaseFirestore/FirebaseFirestore.xcframework/ios-armv7_arm64/FirebaseFirestore.framework/Headers/FIRQuerySnapshot.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseFirestore/FirebaseFirestore/FirebaseFirestore.xcframework/ios-armv7_arm64/FirebaseFirestore.framework/Headers/FIRGeoPoint.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseFirestore/FirebaseFirestore/FirebaseFirestore.xcframework/ios-armv7_arm64/FirebaseFirestore.framework/Headers/FIRFirestoreSettings.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseFirestore/FirebaseFirestore/FirebaseFirestore.xcframework/ios-armv7_arm64/FirebaseFirestore.framework/Headers/FIRFirestoreErrors.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseFirestore/FirebaseFirestore/FirebaseFirestore.xcframework/ios-armv7_arm64/FirebaseFirestore.framework/Headers/FIRFirestore.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseFirestore/FirebaseFirestore/FirebaseFirestore.xcframework/ios-armv7_arm64/FirebaseFirestore.framework/Headers/FIRFieldValue.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseFirestore/FirebaseFirestore/FirebaseFirestore.xcframework/ios-armv7_arm64/FirebaseFirestore.framework/Headers/FIRFieldPath.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseFirestore/FirebaseFirestore/FirebaseFirestore.xcframework/ios-armv7_arm64/FirebaseFirestore.framework/Headers/FIRDocumentSnapshot.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseFirestore/FirebaseFirestore/FirebaseFirestore.xcframework/ios-armv7_arm64/FirebaseFirestore.framework/Headers/FIRDocumentReference.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseFirestore/FirebaseFirestore/FirebaseFirestore.xcframework/ios-armv7_arm64/FirebaseFirestore.framework/Headers/FIRDocumentChange.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseFirestore/FirebaseFirestore/FirebaseFirestore.xcframework/ios-armv7_arm64/FirebaseFirestore.framework/Headers/FIRListenerRegistration.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseFirestore/FirebaseFirestore/FirebaseFirestore.xcframework/ios-armv7_arm64/FirebaseFirestore.framework/Headers/FIRFirestoreSource.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseFirestore/FirebaseFirestore/FirebaseFirestore.xcframework/ios-armv7_arm64/FirebaseFirestore.framework/Headers/FIRQuery.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/FirebaseFirestore/FirebaseFirestore/FirebaseFirestore.xcframework/ios-armv7_arm64/FirebaseFirestore.framework/Headers/FIRCollectionReference.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/firebase_core.build/module.modulemap \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Flutter/Flutter.framework/Modules/module.modulemap \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Flutter/Flutter.framework/Headers/FlutterViewController.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Flutter/Flutter.framework/Headers/FlutterPluginAppLifeCycleDelegate.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Flutter/Flutter.framework/Headers/FlutterHeadlessDartRunner.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Flutter/Flutter.framework/Headers/FlutterEngine.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Flutter/Flutter.framework/Headers/FlutterDartProject.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Flutter/Flutter.framework/Headers/FlutterCallbackCache.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Flutter/Flutter.framework/Headers/FlutterTexture.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Flutter/Flutter.framework/Headers/FlutterPlatformViews.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Flutter/Flutter.framework/Headers/FlutterCodecs.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Flutter/Flutter.framework/Headers/FlutterChannels.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Flutter/Flutter.framework/Headers/FlutterBinaryMessenger.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Flutter/Flutter.framework/Headers/FlutterPlugin.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Flutter/Flutter.framework/Headers/FlutterMacros.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Flutter/Flutter.framework/Headers/FlutterAppDelegate.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Flutter/Flutter.framework/Headers/Flutter.h \
+  /Users/YoniZetune/Develop/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.5.0/ios/Classes/FLTFirebasePluginRegistry.h \
+  /Users/YoniZetune/Develop/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.5.0/ios/Classes/FLTFirebasePlugin.h \
+  /Users/YoniZetune/Develop/flutter/.pub-cache/hosted/pub.dartlang.org/firebase_core-0.5.0/ios/Classes/FLTFirebaseCorePlugin.h \
+  /Users/YoniZetune/Develop/DoubleCheck/double_check/ios/Pods/Target\ Support\ Files/firebase_core/firebase_core-umbrella.h \
+  /Users/YoniZetune/Develop/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.14.0+2/ios/Classes/Private/FLTFirebaseFirestoreUtils.h \
+  /Users/YoniZetune/Develop/flutter/.pub-cache/hosted/pub.dartlang.org/cloud_firestore-0.14.0+2/ios/Classes/Private/FLTFirebaseFirestoreWriter.h

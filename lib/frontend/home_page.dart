@@ -44,7 +44,7 @@ class MyHome extends StatelessWidget {
           centerTitle: true,
           actions: [
             Padding(
-              padding: const EdgeInsets.all(12.0),
+              padding: const EdgeInsets.fromLTRB(10.0,2,10,20),
               child: IconButton(
                 icon: Icon(
                   Icons.logout,
@@ -66,8 +66,8 @@ class MyHome extends StatelessWidget {
             )
           ],
           title: Padding(
-            padding: const EdgeInsets.fromLTRB(70, 30, 0, 20),
-            child: Image(image: AssetImage("assets/images/logo1.png")),
+            padding: const EdgeInsets.fromLTRB(40, 30, 0, 40),
+            child: Image(image: AssetImage("assets/images/logo2.png")),
           ),
         ),
       ),

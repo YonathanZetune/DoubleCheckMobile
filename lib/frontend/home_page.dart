@@ -1,4 +1,7 @@
+import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
+import 'package:double_check/frontend/ask_question_page.dart';
+import 'package:double_check/frontend/polls_page.dart';
 import 'package:double_check/frontend/questions_page.dart';
 import 'package:double_check/models/double_check_info.dart';
 import 'package:double_check/utilities/constants.dart';
@@ -9,14 +12,10 @@ import 'package:flutter_gradients/flutter_gradients.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
-class MyHome extends StatefulWidget {
-  @override
-  _MyHomeState createState() => _MyHomeState();
-}
-
-class _MyHomeState extends State<MyHome> {
+class MyHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var dbinfo = Provider.of<DoubleCheckInfo>(context);
     return Container(
         child: DefaultTabController(
       initialIndex: 0,
@@ -27,8 +26,8 @@ class _MyHomeState extends State<MyHome> {
         body: TabBarView(
           children: [
             QuestionsPage(),
-            JoinSession(),
-            JoinSession(),
+            dbinfo.currSession.isEmpty ? JoinSession() : AskQuestion(),
+            dbinfo.currSession.isEmpty ? JoinSession() : PollsPage(),
           ],
         ),
         bottomNavigationBar: ConvexAppBar(
@@ -51,7 +50,18 @@ class _MyHomeState extends State<MyHome> {
                   Icons.logout,
                   size: 30,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  dbinfo.currSession = "";
+                  AwesomeDialog(
+                      context: context,
+                      dialogType: DialogType.SUCCES,
+                      animType: AnimType.TOPSLIDE,
+                      title: 'You have left the session.',
+                      desc: 'Thanks for using DoubleCheck!',
+                      btnOkOnPress: () {},
+                      btnCancel: null)
+                    ..show();
+                },
               ),
             )
           ],

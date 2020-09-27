@@ -52,7 +52,7 @@ class JoinSession extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(18.0),
               child: Text(
-                "You are not currently in a session, click to join or start a new one!",
+                "You are not currently in a session, click to join with code!",
                 textAlign: TextAlign.center,
                 style: GoogleFonts.montserrat(
                   color: Colors.white,
@@ -113,14 +113,14 @@ class JoinSession extends StatelessWidget {
                                           context: context,
                                           dialogType: DialogType.SUCCES,
                                           animType: AnimType.BOTTOMSLIDE,
-                                          title: 'Session Joined Succesfully!',
+                                          title: 'Session Joined Successfully!',
                                           desc: '',
                                           btnOkOnPress: () {
-                                            dbCheckinfo.currSession = _pinPutController.value.text;
+                                            dbCheckinfo.currSession =
+                                                _pinPutController.value.text;
                                           },
                                           btnCancel: null)
                                         ..show();
-
                                     } else {
                                       AwesomeDialog(
                                           context: context,
@@ -141,22 +141,9 @@ class JoinSession extends StatelessWidget {
                             style: GoogleFonts.baloo(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 28),
+                                fontSize: 38),
                           )),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: FlatButton(
-                          onPressed: () => {},
-                          color: Colors.blue,
-                          child: Text(
-                            "Start",
-                            style: GoogleFonts.baloo(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 28),
-                          )),
-                    )
                   ],
                 ),
                 size: 380,

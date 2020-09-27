@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:badges/badges.dart';
 
 class QuestionsPage extends StatelessWidget {
   @override
@@ -20,6 +21,30 @@ class QuestionsPage extends StatelessWidget {
           .collection('sessions')
           .doc(dbCheckinfo.currSession)
           .collection('studentQuestions');
+    }
+
+    Badge getBadge(int feedbackType) {
+      switch (feedbackType) {
+        case 0:
+          return Badge(
+            badgeColor: Colors.green,
+            badgeContent:
+                Icon(Icons.fast_forward_outlined, color: Colors.white),
+          );
+        case 1:
+          return Badge(
+            badgeColor: Colors.red,
+            badgeContent: Icon(Icons.fast_rewind_outlined, color: Colors.white),
+          );
+        case 2:
+          return Badge(
+            badgeColor: Colors.deepPurpleAccent,
+            badgeContent: Icon(
+              Icons.hearing_disabled,
+              color: Colors.white,
+            ),
+          );
+      }
     }
 
     return dbCheckinfo.currSession.isEmpty
@@ -47,18 +72,46 @@ class QuestionsPage extends StatelessWidget {
                               padding: const EdgeInsets.all(8.0),
                               child: new ListTile(
                                 dense: false,
-                                title: new Text(d.data()['questionBody'] == null ? '' : d.data()['questionBody'], style: GoogleFonts.montserrat(fontSize: 18),),
-                                trailing: Icon(d.data()['isViewed'] != null ? d.data()['isViewed'] ? FontAwesomeIcons.checkDouble: FontAwesomeIcons.userClock : FontAwesomeIcons.question),
+                                title: new Text(
+                                  d.data()['questionBody'] == null
+                                      ? ''
+                                      : d.data()['questionBody'],
+                                  style: GoogleFonts.montserrat(fontSize: 18),
+                                ),
+                                trailing: Icon(d.data()['isViewed'] != null
+                                    ? d.data()['isViewed']
+                                        ? FontAwesomeIcons.checkDouble
+                                        : FontAwesomeIcons.userClock
+                                    : FontAwesomeIcons.question),
                                 subtitle: Row(
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Text(d.data()['upvotes'] == null ? '0': d.data()['upvotes']),
+                                      padding: const EdgeInsets.fromLTRB(
+                                          8.0, 10, 0, 0),
+                                      child: Text(
+                                          d.data()['upVotes'].toString() == null
+                                              ? '0'
+                                              : d.data()['upVotes'].toString()),
                                     ),
-                                    IconButton(
-                                      icon: Icon(FontAwesomeIcons.thumbsUp),
-                                      onPressed: () {},
-                                    )
+                                    Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 12),
+                                      child: IconButton(
+                                        icon: IconButton(
+                                          icon: Icon(FontAwesomeIcons.thumbsUp),
+                                          onPressed: () {
+                                            print("THUMBS");
+                                            final liked = d.data()['upVotes'];
+                                            d.reference
+                                                .update({"upVotes": liked + 1});
+                                          },
+                                        ),
+                                        onPressed: () {},
+                                      ),
+                                    ),
+                                    getBadge(d.data()['feedback_type'] == null
+                                        ? 0
+                                        : d.data()['feedback_type']),
                                   ],
                                 ),
                               ),

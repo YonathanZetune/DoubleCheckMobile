@@ -62,10 +62,17 @@ class QuestionsPage extends StatelessWidget {
                   default:
                     if (projectSnap.hasError)
                       return new Text('Error: ${projectSnap.error}');
-                    else
+                    else {
+                      List<QueryDocumentSnapshot> docs = projectSnap.data.docs;
+                      docs.sort((a, b) =>
+                          b.data()['upVotes'].compareTo(a.data()['upVotes']));
+                      docs.sort((a, b) => a
+                          .data()['isViewed']
+                          .toString()
+                          .compareTo(b.data()['isViewed'].toString()));
+
                       return new ListView(
-                        children: projectSnap.data.docs
-                            .map((QueryDocumentSnapshot d) {
+                        children: docs.map((QueryDocumentSnapshot d) {
                           return Card(
                             elevation: 5,
                             child: Padding(
@@ -119,6 +126,7 @@ class QuestionsPage extends StatelessWidget {
                           );
                         }).toList(),
                       );
+                    }
                 }
               },
             ),

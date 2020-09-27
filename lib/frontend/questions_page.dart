@@ -27,14 +27,14 @@ class QuestionsPage extends StatelessWidget {
       switch (feedbackType) {
         case 0:
           return Badge(
-            badgeColor: Colors.green,
+            badgeColor: Colors.red,
             badgeContent:
-                Icon(Icons.fast_forward_outlined, color: Colors.white),
+                Icon(Icons.fast_rewind_outlined, color: Colors.white),
           );
         case 1:
           return Badge(
-            badgeColor: Colors.red,
-            badgeContent: Icon(Icons.fast_rewind_outlined, color: Colors.white),
+            badgeColor: Colors.green,
+            badgeContent: Icon(FontAwesomeIcons.question, color: Colors.white),
           );
         case 2:
           return Badge(

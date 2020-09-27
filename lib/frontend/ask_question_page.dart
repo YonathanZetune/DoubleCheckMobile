@@ -1,3 +1,4 @@
+import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:double_check/models/double_check_info.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -49,7 +50,7 @@ class AskQuestion extends StatelessWidget {
                                       )),
                                       Expanded(
                                           child: Text(
-                                        "Too Slow",
+                                        "None",
                                         textAlign: TextAlign.center,
                                       )),
                                       Expanded(
@@ -57,6 +58,7 @@ class AskQuestion extends StatelessWidget {
                                         "Can't Hear",
                                         textAlign: TextAlign.center,
                                       )),
+
                                     ],
                                   ),
                                   Row(
@@ -99,7 +101,7 @@ class AskQuestion extends StatelessWidget {
     const questionForm = <Field>[
       Field(
         name: "question",
-        label: "Question",
+        label: "Ask a question here...",
         mandatory: true,
       ),
       Field(
@@ -117,6 +119,7 @@ class AskQuestion extends StatelessWidget {
           group: "Feedback",
           value: "2",
           type: FieldType.radio),
+
     ];
 
     return Padding(
@@ -127,7 +130,17 @@ class AskQuestion extends StatelessWidget {
               print(val.values);
               String session = dbCheckinfo.currSession;
               // val.putIfAbsent(key, () => null)
-              await Requests.postMyQuestion(val, session);
+              await Requests.postMyQuestion(val, session).then((value) => {
+                    AwesomeDialog(
+                        context: context,
+                        dialogType: DialogType.SUCCES,
+                        animType: AnimType.TOPSLIDE,
+                        title: 'Question Submitted Successfully!',
+                        desc: 'Go to the Q/A tab to see all questions.',
+                        btnOkOnPress: () {},
+                        btnCancel: null)
+                      ..show()
+                  });
             },
             onFormChanged: (map) {
               print(map);

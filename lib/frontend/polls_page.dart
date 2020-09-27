@@ -57,7 +57,7 @@ class PollsPage extends StatelessWidget {
 
     Future<List<Widget>> generatePollWidget(
         String pollType, CollectionReference data) async {
-      List<Row> rows = new List<Row>();
+      List<Widget> rows = new List<Widget>();
       rows.clear();
       // rows.add((Row(
       //   children: [Text('HI')],
@@ -72,45 +72,47 @@ class PollsPage extends StatelessWidget {
 
           element.docs.forEach((doc) {
             print(doc.id);
-            rows.add(new Row(
-              children: [
-                FlatButton(
-                  onPressed: () async {
-                    print("PRESSED");
-                    await submitAnswer(doc.data()['answer'], data.parent.id)
-                        .then((value) {
-                      AwesomeDialog(
-                          context: context,
-                          dialogType: DialogType.SUCCES,
-                          animType: AnimType.BOTTOMSLIDE,
-                          title: 'Answer Submitted Successfully!',
-                          desc: 'Wait for your teacher to show the results.',
-                          btnOkOnPress: () {},
-                          btnCancel: null)
-                        ..show();
-                    });
-                  },
-                  child: Text(
-                    choices.elementAt(count),
-                    style: GoogleFonts.montserrat(color: Colors.white),
+            rows.add(Container(
+              child: new Row(
+                children: [
+                  FlatButton(
+                    onPressed: () async {
+                      print("PRESSED");
+                      await submitAnswer(doc.data()['answer'], data.parent.id)
+                          .then((value) {
+                        AwesomeDialog(
+                            context: context,
+                            dialogType: DialogType.SUCCES,
+                            animType: AnimType.BOTTOMSLIDE,
+                            title: 'Answer Submitted Successfully!',
+                            desc: 'Wait for your teacher to show the results.',
+                            btnOkOnPress: () {},
+                            btnCancel: null)
+                          ..show();
+                      });
+                    },
+                    child: Text(
+                      choices.elementAt(count),
+                      style: GoogleFonts.montserrat(color: Colors.white),
+                    ),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(9.0),
+                        side:
+                            BorderSide(color: Colors.deepPurpleAccent, width: 4)),
                   ),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(9.0),
-                      side:
-                          BorderSide(color: Colors.deepPurpleAccent, width: 4)),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(13.0),
-                  child: AutoSizeText(
-                    (doc.data()['answer'] == null
-                            ? "N/A"
-                            : doc.data()['answer'])
-                        .toString(),
-                    style: GoogleFonts.montserrat(),
-                    maxLines: 3,
-                  ),
-                )
-              ],
+                  Padding(
+                    padding: const EdgeInsets.all(13.0),
+                    child: Text(
+                      (doc.data()['answer'] == null
+                              ? "N/A"
+                              : doc.data()['answer'])
+                          .toString(),
+                      style: GoogleFonts.montserrat(fontSize: 12),
+                      maxLines: 3,
+                    ),
+                  )
+                ],
+              ),
             ));
             count++;
           });
@@ -153,7 +155,7 @@ class PollsPage extends StatelessWidget {
                                     fontSize: 18, color: Colors.white),
                               ),
                               topCardHeight: 200,
-                              bottomCardHeight: 300,
+                              bottomCardHeight: 250,
                               width: 400,
                               bottomCardWidget: FutureBuilder(
                                   future: generatePollWidget(
